@@ -6,16 +6,11 @@ This is a simple Node.js application that demonstrates the structure and organiz
 
 ```
 my-node-app
-├── src
-│   ├── app.js
-│   ├── controllers
-│   │   └── index.js
-│   ├── routes
-│   │   └── index.js
-│   └── models
-│       └── index.js
 ├── Dockerfile
 ├── package.json
+├── jest.config.js
+├── app.js
+├── test.app.js
 └── README.md
 ```
 
