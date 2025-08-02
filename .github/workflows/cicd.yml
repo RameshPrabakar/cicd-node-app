@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [22.x]
+        node-version: [18.x, 20.x, 22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,6 +25,9 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm install
+      
+    - name: Run tests
+      run: npm test
 
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-node-app:latest .
